@@ -8,13 +8,10 @@
   </appender>
 
   <logger name="org.mockserver" additivity="false" level="WARN"/>
-  <logger name="org.fcrepo.client" additivity="false" level="${fcrepo-java-client.log:-INFO}">
+  <logger name="org.fcrepo.client" additivity="false" level="TRACE">
     <appender-ref ref="STDOUT"/>
   </logger>
-  <logger name="org.fcrepo.client.WalkerTest" additivity="false" level="${fcrepo-java-client.log:-INFO}">
-    <appender-ref ref="STDOUT"/>
-  </logger>
-  <logger name="org.fcrepo" additivity="false" level="${fcrepo.log:-INFO}">
+  <logger name="org.fcrepo" additivity="false" level="INFO">
     <appender-ref ref="STDOUT"/>
   </logger>
   <logger name="com.gargoylesoftware.htmlunit" additivity="false" level="ERROR">
