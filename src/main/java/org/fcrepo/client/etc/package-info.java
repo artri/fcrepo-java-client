@@ -15,36 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.fcrepo.client;
-
-import java.net.URI;
-
-import org.apache.http.client.methods.HttpRequestBase;
-
 /**
- * Builds a request to delete a resource.
- *
- * @author bbpennel
+ * org.fcrepo.client.etc package.
+ * 
+ * @author artri
  */
-public class DeleteBuilder extends RequestBuilder {
-
-    /**
-     * Instantiate builder.
-     *
-     * @param uri uri request will be issued to
-     * @param client the client
-     */
-    public DeleteBuilder(final URI uri, final FcrepoClient client) {
-        super(uri, client);
-    }
-
-    @Override
-    protected HttpRequestBase createRequest() {
-        return HttpMethods.DELETE.createRequest(targetUri);
-    }
-
-    @Override
-    public DeleteBuilder addHeader(final String name, final String value) {
-        return (DeleteBuilder) super.addHeader(name, value);
-    }
-}
+package org.fcrepo.client.etc;

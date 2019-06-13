@@ -30,7 +30,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 public class HeadBuilder extends RetrieveRequestBuilder {
 
     /**
-     * Instantiate builder
+     * Instantiate builder.
      *
      * @param uri uri request will be issued to
      * @param client the client

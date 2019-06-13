@@ -19,12 +19,14 @@ package org.fcrepo.client;
 
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.toList;
+
 import static org.fcrepo.client.FedoraHeaderConstants.CONTENT_DISPOSITION;
 import static org.fcrepo.client.FedoraHeaderConstants.CONTENT_TYPE;
 import static org.fcrepo.client.FedoraHeaderConstants.LINK;
 import static org.fcrepo.client.FedoraHeaderConstants.LOCATION;
 import static org.fcrepo.client.LinkHeaderConstants.DESCRIBEDBY_REL;
 import static org.fcrepo.client.LinkHeaderConstants.TYPE_REL;
+
 import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,6 +34,7 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.apache.http.HeaderElement;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicHeader;
@@ -73,7 +76,7 @@ public class FcrepoResponse implements Closeable {
     private boolean closed = false;
 
     /**
-     * Create a FcrepoResponse object from the http response
+     * Create a FcrepoResponse object from the http response.
      *
      * @param url the requested URL
      * @param statusCode the HTTP status code
@@ -119,7 +122,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * url getter
+     * url getter.
      *
      * @return the requested URL
      */
@@ -128,7 +131,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * url setter
+     * url setter.
      *
      * @param url the requested URL
      */
@@ -137,7 +140,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * statusCode getter
+     * statusCode getter.
      *
      * @return the HTTP status code
      */
@@ -146,7 +149,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * statusCode setter
+     * statusCode setter.
      *
      * @param statusCode the HTTP status code
      */
@@ -155,7 +158,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * body getter
+     * body getter.
      *
      * @return the response body as a stream
      */
@@ -164,7 +167,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * body setter
+     * body setter.
      *
      * @param body the contents of the response body
      */
@@ -173,7 +176,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * headers getter
+     * headers getter.
      *
      * @return headers from the response
      */
@@ -182,7 +185,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * Get all values for the specified header
+     * Get all values for the specified header.
      *
      * @param name name of the header to retrieve
      * @return All values of the specified header
@@ -192,7 +195,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * Get the first value for the specified header
+     * Get the first value for the specified header.
      *
      * @param name name of the header to retrieve
      * @return First value of the header, or null if not present
@@ -207,7 +210,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * headers setter
+     * headers setter.
      *
      * @param headers headers from the response
      */
@@ -216,7 +219,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * Retrieve link header values matching the given relationship
+     * Retrieve link header values matching the given relationship.
      *
      * @param relationship the relationship of links to return
      * @return list of link header URIs matching the given relationship
@@ -227,7 +230,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * Return true if the response represents a resource with the given type
+     * Return true if the response represents a resource with the given type.
      *
      * @param typeString String containing the URI of the type
      * @return true if the type is present.
@@ -237,7 +240,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * Return true if the response represents a resource with the given type
+     * Return true if the response represents a resource with the given type.
      *
      * @param typeUri URI of the type
      * @return true if the type is present.
@@ -249,7 +252,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * location getter
+     * location getter.
      *
      * @return the location of a related resource
      */
@@ -273,7 +276,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * location setter
+     * location setter.
      *
      * @param location the value of a related resource
      */
@@ -282,7 +285,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * contentType getter
+     * contentType getter.
      *
      * @return the mime-type of response
      */
@@ -294,7 +297,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * contentType setter
+     * contentType setter.
      *
      * @param contentType the mime-type of the response
      */
@@ -303,7 +306,7 @@ public class FcrepoResponse implements Closeable {
     }
 
     /**
-     * Get a map of parameters from the Content-Disposition header if present
+     * Get a map of parameters from the Content-Disposition header if present.
      *
      * @return map of Content-Disposition parameters or null
      */

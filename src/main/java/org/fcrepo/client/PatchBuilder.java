@@ -33,7 +33,7 @@ public class PatchBuilder extends BodyRequestBuilder {
     private static final String SPARQL_UPDATE = "application/sparql-update";
 
     /**
-     * Instantiate builder
+     * Instantiate builder.
      *
      * @param uri uri of the resource this request is being made to
      * @param client the client
@@ -48,7 +48,7 @@ public class PatchBuilder extends BodyRequestBuilder {
     }
 
     /**
-     * Add a body to this request from a stream, with application/sparql-update as its content type
+     * Add a body to this request from a stream, with application/sparql-update as its content type.
      *
      * @param stream InputStream of the content to be sent to the server
      * @return this builder

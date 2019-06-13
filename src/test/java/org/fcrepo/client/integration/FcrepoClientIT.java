@@ -88,7 +88,7 @@ public class FcrepoClientIT extends AbstractResourceIT {
 
     protected URI url;
 
-    final private String UNMODIFIED_DATE = "Mon, 1 Jan 2001 00:00:00 GMT";
+    private final String UNMODIFIED_DATE = "Mon, 1 Jan 2001 00:00:00 GMT";
 
     public FcrepoClientIT() throws Exception {
         super();

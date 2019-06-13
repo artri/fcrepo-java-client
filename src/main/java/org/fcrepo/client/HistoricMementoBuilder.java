@@ -17,8 +17,8 @@
  */
 package org.fcrepo.client;
 
-import static org.fcrepo.client.HeaderHelpers.UTC_RFC_1123_FORMATTER;
 import static org.fcrepo.client.FedoraHeaderConstants.MEMENTO_DATETIME;
+import static org.fcrepo.client.HeaderHelpers.UTC_RFC_1123_FORMATTER;
 
 import java.net.URI;
 import java.time.Instant;
@@ -32,7 +32,7 @@ import java.time.Instant;
 public class HistoricMementoBuilder extends PostBuilder {
 
     /**
-     * Instantiate builder
+     * Instantiate builder.
      *
      * @param uri uri of the resource this request is being made to
      * @param client the client

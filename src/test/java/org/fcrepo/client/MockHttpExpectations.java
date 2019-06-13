@@ -26,7 +26,7 @@ import org.apache.http.HttpStatus;
 import org.mockserver.client.MockServerClient;
 
 /**
- * Expectations for the Mock Http Server
+ * Expectations for the Mock Http Server.
  *
  * @author esm
  */
@@ -35,14 +35,14 @@ public final class MockHttpExpectations {
     /**
      * The TCP host the mock HTTP server listens to.
      */
-    final static String host = "localhost";
+    static final String HOST = "localhost";
 
     /**
      * The TCP port the mock HTTP server listens to.
      */
     static String port;
 
-    final static class Uris {
+    static final class Uris {
         int statusCode;
         String suffix;
         String path;
@@ -59,7 +59,7 @@ public final class MockHttpExpectations {
         }
 
         URI asUri() {
-            return URI.create("http://" + host + ":" + port + path);
+            return URI.create("http://" + HOST + ":" + port + path);
         }
 
         @Override
@@ -68,7 +68,12 @@ public final class MockHttpExpectations {
         }
     }
 
-    public final static class SupportedUris {
+    /**
+     * SupportedUris class.
+     * 
+     * @author artri
+     */
+    public static final class SupportedUris {
 
         /**
          * A request URI that will return a 500.
@@ -88,7 +93,7 @@ public final class MockHttpExpectations {
         /**
          * A request URI that will return a 200 with a text response body.
          */
-        final public Uris uri200RespBody = new Uris(200, "RespBody");
+        public final Uris uri200RespBody = new Uris(200, "RespBody");
     }
 
     /**

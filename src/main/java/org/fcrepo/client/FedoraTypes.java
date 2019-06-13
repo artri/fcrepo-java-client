@@ -40,16 +40,16 @@ public class FedoraTypes {
     public static final String LDP_INDIRECT_CONTAINER = "http://www.w3.org/ns/ldp#IndirectContainer";
 
     // Type representing a Memento TimeGate
-    public final static String MEMENTO_TIME_GATE_TYPE = "http://mementoweb.org/ns#TimeGate";
+    public static final String MEMENTO_TIME_GATE_TYPE = "http://mementoweb.org/ns#TimeGate";
 
     // Type representing a Memento TimeMap (LDPCv)
-    public final static String MEMENTO_TIME_MAP_TYPE = "http://mementoweb.org/ns#TimeMap";
+    public static final String MEMENTO_TIME_MAP_TYPE = "http://mementoweb.org/ns#TimeMap";
 
     // Type representing a Memento original resource (LDPRv)
-    public final static String MEMENTO_ORIGINAL_TYPE = "http://mementoweb.org/ns#OriginalResource";
+    public static final String MEMENTO_ORIGINAL_TYPE = "http://mementoweb.org/ns#OriginalResource";
 
     // Type representing a Memento (LDPRm)
-    public final static String MEMENTO_TYPE = "http://mementoweb.org/ns#Memento";
+    public static final String MEMENTO_TYPE = "http://mementoweb.org/ns#Memento";
 
     private FedoraTypes() {
     }

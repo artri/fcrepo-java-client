@@ -35,7 +35,7 @@ public class ExternalContentHandling {
     /**
      * Requests that the server record the location of the external content and handle
      * requests for that content using HTTP redirect responses with the Content-Location
-     * header specifying the external content location
+     * header specifying the external content location.
      */
     public static final String REDIRECT = "redirect";
 

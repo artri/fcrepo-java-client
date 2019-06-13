@@ -17,8 +17,8 @@
  */
 package org.fcrepo.client;
 
-import static org.slf4j.LoggerFactory.getLogger;
 import static org.fcrepo.client.FedoraHeaderConstants.LINK;
+import static org.slf4j.LoggerFactory.getLogger;
 
 import java.net.URI;
 
@@ -27,7 +27,7 @@ import org.apache.http.util.Args;
 import org.slf4j.Logger;
 
 /**
- * Base RequestBuilder class for constructing requests to the Fedora API
+ * Base RequestBuilder class for constructing requests to the Fedora API.
  *
  * @author bbpennel
  */
@@ -60,14 +60,14 @@ public abstract class RequestBuilder {
     }
 
     /**
-     * Creates the HTTP request object for this builder
+     * Creates the HTTP request object for this builder.
      *
      * @return HTTP request object for this builder
      */
     protected abstract HttpRequestBase createRequest();
 
     /**
-     * Performs the request constructed in this builder and returns the response
+     * Performs the request constructed in this builder and returns the response.
      *
      * @return the repository response
      * @throws FcrepoOperationFailedException when the underlying HTTP request results in an error
@@ -92,7 +92,7 @@ public abstract class RequestBuilder {
     }
 
     /**
-     * Add a link header to the request
+     * Add a link header to the request.
      *
      * @param linkHeader link header value represented as a FcrepoLink
      * @return this builder

@@ -41,7 +41,7 @@ import org.apache.http.protocol.HttpCoreContext;
 import org.slf4j.Logger;
 
 /**
- * A utility class for building an httpclient for interacting with a Fedora repository
+ * A utility class for building an httpclient for interacting with a Fedora repository.
  *
  * @author Aaron Coburn
  * @since March 9, 2015
@@ -57,7 +57,7 @@ public class FcrepoHttpClientBuilder {
     private static final Logger LOGGER = getLogger(FcrepoHttpClientBuilder.class);
 
     /**
-     * Create a FcrepoHttpClientBuilder object with which it is possible to create
+     * Create a FcrepoHttpClientBuilder object with which it is possible to create.
      * an HttpClient object
      *
      * @param username an optional username for authentication
@@ -71,7 +71,7 @@ public class FcrepoHttpClientBuilder {
     }
 
     /**
-     *  Build an HttpClient
+     *  Build an HttpClient.
      *
      *  @return an HttpClient
      */

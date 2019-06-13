@@ -19,6 +19,7 @@ package org.fcrepo.client;
 
 import static org.fcrepo.client.FedoraHeaderConstants.CONTENT_DISPOSITION;
 import static org.fcrepo.client.FedoraHeaderConstants.SLUG;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,7 +38,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 public class PostBuilder extends BodyRequestBuilder {
 
     /**
-     * Instantiate builder
+     * Instantiate builder.
      *
      * @param uri uri of the resource this request is being made to
      * @param client the client
@@ -118,7 +119,7 @@ public class PostBuilder extends BodyRequestBuilder {
     }
 
     /**
-     * Provide a content disposition header which will be used as the filename
+     * Provide a content disposition header which will be used as the filename.
      *
      * @param filename the name of the file being provided in the body of the request
      * @return this builder

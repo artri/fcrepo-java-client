@@ -36,11 +36,11 @@ import java.util.stream.Collectors;
 public class HeaderHelpers {
 
     // Formatter for converting instants to RFC1123 timestamps in UTC
-    public static DateTimeFormatter UTC_RFC_1123_FORMATTER = RFC_1123_DATE_TIME.withZone(ZoneId.of("UTC"));
+    public static final DateTimeFormatter UTC_RFC_1123_FORMATTER = RFC_1123_DATE_TIME.withZone(ZoneId.of("UTC"));
 
     /**
      * Format a map of values to q values into a quality value formatted header, as per:
-     *  https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html
+     * https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html.
      *
      * For example, "md5;q=1.0, sha256,sha512;q=0.3"
      *

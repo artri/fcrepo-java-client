@@ -29,7 +29,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 public class OptionsBuilder extends RequestBuilder {
 
     /**
-     * Instantiate builder
+     * Instantiate builder.
      *
      * @param uri uri of the resource this request is being made to
      * @param client the client

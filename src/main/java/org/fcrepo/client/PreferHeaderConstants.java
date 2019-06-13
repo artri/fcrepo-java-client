@@ -20,41 +20,41 @@ package org.fcrepo.client;
 import java.net.URI;
 
 /**
- * Constants for Prefer headers
+ * Constants for Prefer headers.
  *
  * @author bbpennel
  */
 public class PreferHeaderConstants {
 
     // Embed "child" resources in the returned representation
-    public final static URI PREFER_CONTAINED_DESCRIPTIONS = URI.create(
+    public static final URI PREFER_CONTAINED_DESCRIPTIONS = URI.create(
             "http://www.w3.org/ns/oa#PreferContainedDescriptions");
 
     // Include/Exclude "ldp:contains" assertions to contained resources
-    public final static URI PREFER_CONTAINMENT = URI.create("http://www.w3.org/ns/ldp#PreferContainment");
+    public static final URI PREFER_CONTAINMENT = URI.create("http://www.w3.org/ns/ldp#PreferContainment");
 
     // Include/Exclude assertions to member resources established by the Direct and Indirect containers
-    public final static URI PREFER_MEMBERSHIP = URI.create("http://www.w3.org/ns/ldp#PreferMembership");
+    public static final URI PREFER_MEMBERSHIP = URI.create("http://www.w3.org/ns/ldp#PreferMembership");
 
     // Include/Exclude triples that would be present when the container is empty
-    public final static URI PREFER_MINIMAL_CONTAINER = URI.create("http://www.w3.org/ns/ldp#PreferMinimalContainer");
+    public static final URI PREFER_MINIMAL_CONTAINER = URI.create("http://www.w3.org/ns/ldp#PreferMinimalContainer");
 
     // Include assertions from other Fedora resources to this node
-    public final static URI PREFER_INBOUND_REFERENCES = URI.create(
+    public static final URI PREFER_INBOUND_REFERENCES = URI.create(
             "http://fedora.info/definitions/fcrepo#PreferInboundReferences");
 
     // Embed server managed properties in the representation
-    public final static URI PREFER_SERVER_MANAGED = URI.create(
+    public static final URI PREFER_SERVER_MANAGED = URI.create(
             "http://fedora.info/definitions/v4/repository#ServerManaged");
 
     // Allows replacing the properties of a container without having to provide all of the server-managed triples
-    public final static String HANDLING_LENIENT = "handling=lenient; received=\"minimal\"";
+    public static final String HANDLING_LENIENT = "handling=lenient; received=\"minimal\"";
 
     // links to other resources and their properties should be included
-    public final static String RETURN_REPRESENTATION = "return=representation";
+    public static final String RETURN_REPRESENTATION = "return=representation";
 
     // only triples directly related to a resource should be returned
-    public final static String RETURN_MINIMAL = "return=minimal";
+    public static final String RETURN_MINIMAL = "return=minimal";
 
     private PreferHeaderConstants() {
     }

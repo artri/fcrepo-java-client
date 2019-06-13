@@ -22,8 +22,9 @@ import static org.fcrepo.client.FedoraHeaderConstants.IF_MODIFIED_SINCE;
 import static org.fcrepo.client.FedoraHeaderConstants.IF_NONE_MATCH;
 import static org.fcrepo.client.FedoraHeaderConstants.PREFER;
 import static org.fcrepo.client.FedoraHeaderConstants.RANGE;
-import static org.fcrepo.client.PreferHeaderConstants.RETURN_REPRESENTATION;
 import static org.fcrepo.client.PreferHeaderConstants.RETURN_MINIMAL;
+import static org.fcrepo.client.PreferHeaderConstants.RETURN_REPRESENTATION;
+
 import java.net.URI;
 import java.time.Instant;
 import java.util.List;
@@ -33,14 +34,14 @@ import java.util.stream.Collectors;
 import org.apache.http.client.methods.HttpRequestBase;
 
 /**
- * Builds a GET request to retrieve the content of a resource from the Fedora HTTP API
+ * Builds a GET request to retrieve the content of a resource from the Fedora HTTP API.
  *
  * @author bbpennel
  */
 public class GetBuilder extends RetrieveRequestBuilder {
 
     /**
-     * Construct a GetBuilder
+     * Construct a GetBuilder.
      *
      * @param uri the target
      * @param client the client for this request
@@ -69,7 +70,7 @@ public class GetBuilder extends RetrieveRequestBuilder {
     }
 
     /**
-     * Set the byte range of content to retrieve
+     * Set the byte range of content to retrieve.
      *
      * @param rangeStart beginning byte index
      * @param rangeEnd ending byte index
@@ -148,7 +149,7 @@ public class GetBuilder extends RetrieveRequestBuilder {
     }
 
     /**
-     * Provide an etag for the if-none-match header for this request
+     * Provide an etag for the if-none-match header for this request.
      *
      * @param etag etag to provide as the if-none-match header
      * @return this builder
@@ -161,7 +162,7 @@ public class GetBuilder extends RetrieveRequestBuilder {
     }
 
     /**
-     * Provide a if-last-modified header for this request
+     * Provide a if-last-modified header for this request.
      *
      * @param lastModified date to provided as the if-modified-since header
      * @return this builder

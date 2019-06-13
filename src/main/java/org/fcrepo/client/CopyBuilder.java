@@ -22,7 +22,7 @@ import java.net.URI;
 import org.apache.http.client.methods.HttpRequestBase;
 
 /**
- * Builds a request to copy a resource (and its subtree) to a new location
+ * Builds a request to copy a resource (and its subtree) to a new location.
  *
  * @author bbpennel
  * @deprecated the COPY method is not supported by the Fedora 1.0 specification
@@ -31,7 +31,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 public class CopyBuilder extends MoveBuilder {
 
     /**
-     * Instantiate builder
+     * Instantiate builder.
      *
      * @param sourceUrl uri of the resource
      * @param destinationUrl uri for the new path for the moved resource

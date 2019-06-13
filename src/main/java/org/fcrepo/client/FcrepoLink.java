@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 /**
- * A class representing the value of an HTTP Link header
+ * A class representing the value of an HTTP Link header.
  *
  * @author Aaron Coburn
  * @author bbpennel
@@ -67,7 +67,7 @@ public class FcrepoLink {
     }
 
     /**
-     * Retrieve the URI of the link
+     * Retrieve the URI of the link.
      *
      * @return the URI portion of a Link header
      */
@@ -76,7 +76,7 @@ public class FcrepoLink {
     }
 
     /**
-     * Retrieve the REL portion of the link
+     * Retrieve the REL portion of the link.
      *
      * @return the "rel" portion of a Link header
      */
@@ -85,7 +85,7 @@ public class FcrepoLink {
     }
 
     /**
-     * Retrieve the type portion of the link
+     * Retrieve the type portion of the link.
      *
      * @return the "type" parameter of the header
      */
@@ -94,7 +94,7 @@ public class FcrepoLink {
     }
 
     /**
-     * Retrieve a parameter from the link header
+     * Retrieve a parameter from the link header.
      *
      * @param name name of the parameter in the link header
      * @return the value of the parameter or null if not present.
@@ -104,7 +104,7 @@ public class FcrepoLink {
     }
 
     /**
-     * Retrieve a map of parameters from the link header
+     * Retrieve a map of parameters from the link header.
      *
      * @return map of parameters
      */
@@ -113,7 +113,7 @@ public class FcrepoLink {
     }
 
     /**
-     * Parse the value of a link header
+     * Parse the value of a link header.
      */
     private void parse(final String link) {
         final int paramIndex = link.indexOf(PARAM_DELIM);
@@ -181,7 +181,7 @@ public class FcrepoLink {
     }
 
     /**
-     * Extract the URI part of the link header
+     * Extract the URI part of the link header.
      */
     private static URI getLinkPart(final String uriPart) {
         final String linkPart = uriPart.trim();
@@ -282,7 +282,7 @@ public class FcrepoLink {
     }
 
     /**
-     * Builder class for link headers represented as FcrepoLinks
+     * Builder class for link headers represented as FcrepoLinks.
      *
      * @author bbpennel
      */
@@ -293,14 +293,14 @@ public class FcrepoLink {
         private Map<String, String> params;
 
         /**
-         * Construct a builder
+         * Construct a builder.
          */
         public Builder() {
             this.params = new HashMap<>();
         }
 
         /**
-         * Set the URI for this link
+         * Set the URI for this link.
          *
          * @param uri URI for link
          * @return this builder
@@ -311,7 +311,7 @@ public class FcrepoLink {
         }
 
         /**
-         * Set the URI for this link
+         * Set the URI for this link.
          *
          * @param uri URI for link
          * @return this builder
@@ -322,7 +322,7 @@ public class FcrepoLink {
         }
 
         /**
-         * Set a rel parameter for this link
+         * Set a rel parameter for this link.
          *
          * @param rel rel param value
          * @return this builder
@@ -332,7 +332,7 @@ public class FcrepoLink {
         }
 
         /**
-         * Set a type parameter for this link
+         * Set a type parameter for this link.
          *
          * @param type type param value
          * @return this builder
@@ -342,7 +342,7 @@ public class FcrepoLink {
         }
 
         /**
-         * Set an arbitrary parameter for this link
+         * Set an arbitrary parameter for this link.
          *
          * @param name name of the parameter
          * @param value value of the parameter

@@ -25,7 +25,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.util.Args;
 
 /**
- * Builds a request to move a resource (and its subtree) to a new location
+ * Builds a request to move a resource (and its subtree) to a new location.
  *
  * @author bbpennel
  * @deprecated the MOVE method is not supported by the Fedora 1.0 specification
@@ -34,7 +34,7 @@ import org.apache.http.util.Args;
 public class MoveBuilder extends RequestBuilder {
 
     /**
-     * Instantiate builder
+     * Instantiate builder.
      *
      * @param sourceUrl uri of the resource
      * @param destinationUrl uri for the new path for the moved resource

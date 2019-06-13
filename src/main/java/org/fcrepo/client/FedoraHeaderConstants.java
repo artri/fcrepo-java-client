@@ -18,11 +18,11 @@
 package org.fcrepo.client;
 
 /**
- * Header constants used in calls to the Fedora API
+ * Header constants used in calls to the Fedora API.
  *
  * @author bbpennel
  */
-public class FedoraHeaderConstants {
+public final class FedoraHeaderConstants {
 
     public static final String CONTENT_TYPE = "Content-Type";
 

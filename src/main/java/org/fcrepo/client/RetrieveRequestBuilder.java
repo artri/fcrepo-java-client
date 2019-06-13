@@ -17,10 +17,10 @@
  */
 package org.fcrepo.client;
 
+import static org.fcrepo.client.FedoraHeaderConstants.ACCEPT_DATETIME;
 import static org.fcrepo.client.FedoraHeaderConstants.CACHE_CONTROL;
 import static org.fcrepo.client.FedoraHeaderConstants.WANT_DIGEST;
 import static org.fcrepo.client.HeaderHelpers.UTC_RFC_1123_FORMATTER;
-import static org.fcrepo.client.FedoraHeaderConstants.ACCEPT_DATETIME;
 
 import java.net.URI;
 import java.time.Instant;
@@ -28,7 +28,7 @@ import java.time.Instant;
 import org.apache.http.client.config.RequestConfig;
 
 /**
- * Abstract builder for requests to retrieve information from the server
+ * Abstract builder for requests to retrieve information from the server.
  *
  * @author bbpennel
  */
@@ -49,7 +49,7 @@ public abstract class RetrieveRequestBuilder extends RequestBuilder {
     }
 
     /**
-     * Provide a Want-Digest header for this request
+     * Provide a Want-Digest header for this request.
      *
      * @param value header value, following the syntax defined in: https://tools.ietf.org/html/rfc3230#section-4.3.1
      * @return this builder
@@ -62,7 +62,7 @@ public abstract class RetrieveRequestBuilder extends RequestBuilder {
     }
 
     /**
-     * Provide a Cache-Control header with value "no-cache"
+     * Provide a Cache-Control header with value "no-cache".
      *
      * @return this builder
      */

@@ -39,7 +39,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 public class PutBuilder extends BodyRequestBuilder {
 
     /**
-     * Instantiate builder
+     * Instantiate builder.
      *
      * @param uri uri of the resource this request is being made to
      * @param client the client
@@ -135,7 +135,7 @@ public class PutBuilder extends BodyRequestBuilder {
     }
 
     /**
-     * Provide a content disposition header which will be used as the filename
+     * Provide a content disposition header which will be used as the filename.
      *
      * @param filename the name of the file being provided in the body of the request
      * @return this builder

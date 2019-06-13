@@ -24,9 +24,9 @@ import static org.fcrepo.client.FedoraHeaderConstants.IF_STATE_TOKEN;
 import static org.fcrepo.client.FedoraHeaderConstants.IF_UNMODIFIED_SINCE;
 import static org.fcrepo.client.FedoraHeaderConstants.LINK;
 import static org.fcrepo.client.LinkHeaderConstants.ACL_REL;
-import static org.fcrepo.client.LinkHeaderConstants.TYPE_REL;
 import static org.fcrepo.client.LinkHeaderConstants.EXTERNAL_CONTENT_HANDLING;
 import static org.fcrepo.client.LinkHeaderConstants.EXTERNAL_CONTENT_REL;
+import static org.fcrepo.client.LinkHeaderConstants.TYPE_REL;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -41,7 +41,7 @@ import org.apache.http.entity.InputStreamEntity;
 import org.fcrepo.client.FcrepoLink.Builder;
 
 /**
- * Request builder which includes a body component
+ * Request builder which includes a body component.
  *
  * @author bbpennel
  */
@@ -51,7 +51,7 @@ public abstract class BodyRequestBuilder extends
     private StringJoiner digestJoiner;
 
     /**
-     * Instantiate builder
+     * Instantiate builder.
      *
      * @param uri uri request will be issued to
      * @param client the client
@@ -61,7 +61,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Add a body to this request from a stream, with application/octet-stream as its content type
+     * Add a body to this request from a stream, with application/octet-stream as its content type.
      *
      * @param stream InputStream of the content to be sent to the server
      * @return this builder
@@ -71,7 +71,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Add a body to this request as a stream with the given content type
+     * Add a body to this request as a stream with the given content type.
      *
      * @param stream InputStream of the content to be sent to the server
      * @param contentType the Content-Type of the body
@@ -80,7 +80,7 @@ public abstract class BodyRequestBuilder extends
     protected BodyRequestBuilder body(final InputStream stream, final String contentType) {
         if (stream != null) {
             String type = contentType;
-            if (type == null) {
+            if (StringUtils.isBlank(type)) {
                 type = "application/octet-stream";
             }
 
@@ -92,7 +92,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Add the given file as the body for this request with the provided content type
+     * Add the given file as the body for this request with the provided content type.
      *
      * @param file File containing the content to be sent to the server
      * @param contentType the Content-Type of the body
@@ -140,7 +140,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Provide a checksum for the body of this request
+     * Provide a checksum for the body of this request.
      *
      * @param digest checksum to provide as the digest for the request body
      * @param alg abbreviated algorithm identifier for the type of checksum being
@@ -148,7 +148,7 @@ public abstract class BodyRequestBuilder extends
      * @return this builder
      */
     protected BodyRequestBuilder digest(final String digest, final String alg) {
-        if (digest != null) {
+        if (StringUtils.isNotBlank(digest)) {
             if (digestJoiner == null) {
                 digestJoiner = new StringJoiner(", ");
             }
@@ -169,7 +169,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Provide a MD5 checksum for the body of this request
+     * Provide a MD5 checksum for the body of this request.
      *
      * @param digest MD5 checksum to provide as the digest for the request body
      * @return this builder
@@ -179,7 +179,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Provide a SHA-256 checksum for the body of this request
+     * Provide a SHA-256 checksum for the body of this request.
      *
      * @param digest sha-256 checksum to provide as the digest for the request body
      * @return this builder
@@ -189,7 +189,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Add an interaction model to the request
+     * Add an interaction model to the request.
      *
      * @param interactionModelUri URI of the interaction model
      * @return this builder
@@ -205,7 +205,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Provide a if-unmodified-since header for this request
+     * Provide a if-unmodified-since header for this request.
      *
      * @param modified date to provide as the if-unmodified-since header
      * @return this builder
@@ -218,7 +218,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Provide an etag for the if-match header for this request
+     * Provide an etag for the if-match header for this request.
      *
      * @param etag etag to provide as the if-match header
      * @return this builder
@@ -231,7 +231,7 @@ public abstract class BodyRequestBuilder extends
     }
 
     /**
-     * Provide the URI to an ACL for this request
+     * Provide the URI to an ACL for this request.
      *
      * @param aclUri URI to the ACL
      * @return this builder

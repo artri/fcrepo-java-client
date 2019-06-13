@@ -27,12 +27,14 @@ import java.net.URI;
  */
 public class FcrepoOperationFailedException extends Exception {
 
+    private static final long serialVersionUID = 3835767028563555540L;
+
     private final URI url;
     private final int statusCode;
     private final String statusText;
 
     /**
-     * Create an FcrepoOperationFailedException
+     * Create an FcrepoOperationFailedException.
      *
      * @param url the requested url
      * @param statusCode the HTTP response code
@@ -47,7 +49,7 @@ public class FcrepoOperationFailedException extends Exception {
     }
 
     /**
-     * Return the requested url
+     * Return the requested url.
      *
      * @return the requested URL
      */
@@ -56,7 +58,7 @@ public class FcrepoOperationFailedException extends Exception {
     }
 
     /**
-     * Get the status code
+     * Get the status code.
      *
      * @return the HTTP status code
      */
@@ -65,7 +67,7 @@ public class FcrepoOperationFailedException extends Exception {
     }
 
     /**
-     * Get the status text
+     * Get the status text.
      *
      * @return the status text for the error
      */

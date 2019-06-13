@@ -297,7 +297,7 @@ public class FcrepoClientErrorTest {
         final Header locationHeader = new BasicHeader(LOCATION, null);
         final Header contentTypeHeader = new BasicHeader("Content-Type", TEXT_TURTLE);
         final Header linkHeader = new BasicHeader("Link", "<" + baseUrl + "/bar>; rel=\"describedby\"");
-        final Header linkFooHeader = new BasicHeader("Link" ,"<" + baseUrl + "/bar>; rel=\"foo\"");
+        final Header linkFooHeader = new BasicHeader("Link" , "<" + baseUrl + "/bar>; rel=\"foo\"");
         final Header[] headers = new Header[]{ locationHeader, contentTypeHeader, linkHeader, linkFooHeader };
 
         when(mockHttpclient.execute(any(HttpUriRequest.class))).thenReturn(mockResponse);
@@ -321,7 +321,7 @@ public class FcrepoClientErrorTest {
         final Header locationHeader = new BasicHeader(LOCATION, null);
         final Header contentTypeHeader = new BasicHeader(CONTENT_TYPE, null);
         final Header linkHeader = new BasicHeader("Link", "<" + baseUrl + "/bar>; rel=\"describedby\"");
-        final Header linkFooHeader = new BasicHeader("Link" ,"<" + baseUrl + "/bar>; rel=\"foo\"");
+        final Header linkFooHeader = new BasicHeader("Link" , "<" + baseUrl + "/bar>; rel=\"foo\"");
         final Header[] headers = new Header[]{ locationHeader, contentTypeHeader, linkHeader, linkFooHeader };
 
         when(mockHttpclient.execute(any(HttpUriRequest.class))).thenReturn(mockResponse);

@@ -65,7 +65,7 @@ public class FcrepoClient {
     private static final Logger LOGGER = getLogger(FcrepoClient.class);
 
     /**
-     * Build a FcrepoClient
+     * Build a FcrepoClient.
      *
      * @return a client builder
      */
@@ -156,7 +156,7 @@ public class FcrepoClient {
     }
 
     /**
-     * Make a DELETE request to delete a resource
+     * Make a DELETE request to delete a resource.
      *
      * @param url the URL of the resource to which to DELETE
      * @return a delete request builder object
@@ -192,7 +192,7 @@ public class FcrepoClient {
     }
 
     /**
-     * Make a GET request to retrieve the content of a resource
+     * Make a GET request to retrieve the content of a resource.
      *
      * @param url the URL of the resource to which to GET
      * @return a get request builder object
@@ -222,7 +222,7 @@ public class FcrepoClient {
     }
 
     /**
-     * Execute a HTTP request
+     * Execute a HTTP request.
      *
      * @param url URI the request is made to
      * @param request the request
@@ -238,7 +238,7 @@ public class FcrepoClient {
     }
 
     /**
-     * Execute the HTTP request
+     * Execute the HTTP request.
      */
     private CloseableHttpResponse executeRequest(final HttpRequestBase request)
             throws FcrepoOperationFailedException {
@@ -283,7 +283,7 @@ public class FcrepoClient {
     }
 
     /**
-     * Extract the response body as an input stream
+     * Extract the response body as an input stream.
      */
     private static InputStream getEntityContent(final HttpResponse response) {
         try {
@@ -300,7 +300,7 @@ public class FcrepoClient {
     }
 
     /**
-     * Retrieve all header values
+     * Retrieve all header values.
      *
      * @param response response from request
      * @return Map of all values for all response headers
@@ -322,7 +322,7 @@ public class FcrepoClient {
     }
 
     /**
-     * Builds an FcrepoClient
+     * Builds an FcrepoClient.
      *
      * @author bbpennel
      */
@@ -337,7 +337,7 @@ public class FcrepoClient {
         private boolean throwExceptionOnFailure;
 
         /**
-         * Add basic authentication credentials to this client
+         * Add basic authentication credentials to this client.
          *
          * @param username username for authentication
          * @param password password for authentication
@@ -350,7 +350,7 @@ public class FcrepoClient {
         }
 
         /**
-         * Add an authentication scope to this client
+         * Add an authentication scope to this client.
          *
          * @param authHost authentication scope value
          * @return this builder
@@ -362,7 +362,7 @@ public class FcrepoClient {
         }
 
         /**
-         * Client should throw exceptions when failures occur
+         * Client should throw exceptions when failures occur.
          *
          * @return this builder
          */
@@ -372,7 +372,7 @@ public class FcrepoClient {
         }
 
         /**
-         * Get the client
+         * Get the client.
          *
          * @return the client constructed by this builder
          */

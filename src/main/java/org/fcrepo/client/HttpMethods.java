@@ -30,7 +30,7 @@ import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpRequestBase;
 
 /**
- * Represents an HTTP method to pass to the underlying client
+ * Represents an HTTP method to pass to the underlying client.
  *
  * @author Aaron Coburn
  * @since January 8, 2015
@@ -57,7 +57,7 @@ public enum HttpMethods {
     }
 
     /**
-     * Instantiate a new HttpRequst object from the method type
+     * Instantiate a new HttpRequst object from the method type.
      *
      * @param url the URI that is part of the request
      * @return an instance of the corresponding request class
@@ -77,10 +77,10 @@ public enum HttpMethods {
      */
     public static class HttpMove extends HttpRequestBase {
 
-        public final static String METHOD_NAME = "MOVE";
+        public static final String METHOD_NAME = "MOVE";
 
         /**
-         * Instantiate MOVE request base
+         * Instantiate MOVE request base.
          * 
          * @param uri uri for the request
          */
@@ -102,10 +102,10 @@ public enum HttpMethods {
      */
     public static class HttpCopy extends HttpRequestBase {
 
-        public final static String METHOD_NAME = "COPY";
+        public static final String METHOD_NAME = "COPY";
 
         /**
-         * Instantiate COPY request base
+         * Instantiate COPY request base.
          * 
          * @param uri uri for the request
          */
